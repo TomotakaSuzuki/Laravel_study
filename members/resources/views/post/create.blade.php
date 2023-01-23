@@ -23,15 +23,15 @@
                 </div>
 
                 <div class="w-full flex flex-col">
-                    <label for="image" class="font-semibold leading-none mt-4">画像</label>
+                    <label for="image" class="font-semibold leading-none mt-4">画像(1MBまで)</label>
                     <div>
                     <input id="image" type="file" name="image">
                     </div>
                 </div>
 
-                <button class="mt-4">
+                <x-primary-button class="mt-4">
                     送信する
-                </button>
+                </x-primary-button>
                 
             </form>
         </div>
