@@ -15,7 +15,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::orderBy('created_at','desc')->get(); //postsテーブル全部
+        $user = auth()->user(); //ログイン中のユーザ
+        return view('post.index', compact('posts','user')); //['posts'=>$posts, 'user'=>$user]連想配列
     }
 
     /**
@@ -64,7 +66,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('post.show', compact('post'));
     }
 
     /**
